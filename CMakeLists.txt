@@ -22,8 +22,8 @@ add_executable(
         src/window.h
         src/path.c
         src/path.h
-        src/gtk-assets.c
-        src/gtk-assets.h)
+        src/string.h
+        src/string.c)
 target_link_libraries(samp-linux ${GTK4_LIBRARIES})
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/cmake-build)

@@ -7,8 +7,6 @@
   <object>
 	(1,1,"GtkWindow","window",None,None,None,None,None),
 	(1,2,"GtkNotebook",None,1,None,None,None,None),
-	(1,3,"GtkBox",None,2,None,None,None,None),
-	(1,4,"GtkBox",None,2,None,None,None,1),
 	(1,5,"GtkBox",None,2,None,None,None,2),
 	(1,6,"GtkBox",None,2,None,None,None,3),
 	(1,7,"GtkBox",None,6,None,None,None,None),
@@ -18,12 +16,20 @@
 	(1,11,"GtkBox",None,6,None,None,None,1),
 	(1,12,"GtkEntry","wine_input",11,None,None,None,None),
 	(1,13,"GtkButton","button_check_wine",11,None,None,None,1),
-	(1,14,"GtkButton","clear_wine_path_input",11,None,None,None,2)
+	(1,14,"GtkButton","clear_wine_path_input",11,None,None,None,2),
+	(1,15,"GtkBox",None,2,None,None,None,None),
+	(1,16,"GtkListBox",None,15,None,None,None,None),
+	(1,26,"GtkBox",None,2,None,None,None,1),
+	(1,27,"GtkBox","favorites_tab_bottom_box",15,None,None,None,2),
+	(1,28,"GtkEntry","entry_add_server",27,None,None,None,None),
+	(1,29,"GtkButton","button_add_server",27,None,None,None,1),
+	(1,30,"GtkButton","button_connect_to_server",27,None,None,None,2),
+	(1,31,"GtkEntry",None,16,None,None,None,None),
+	(1,32,"GtkEntry",None,15,None,None,None,1)
   </object>
   <object_property>
 	(1,2,"GtkNotebook","page","3",None,None,None,None,None),
 	(1,2,"GtkNotebook","tab-pos","left",None,None,None,None,None),
-	(1,4,"GtkOrientable","orientation","vertical",None,None,None,None,None),
 	(1,6,"GtkOrientable","orientation","vertical",None,None,None,None,None),
 	(1,7,"GtkBox","spacing","1",None,None,None,None,None),
 	(1,8,"GtkEntry","input-purpose","url",None,None,None,None,None),
@@ -55,6 +61,28 @@
 	(1,14,"GtkWidget","margin-end","12",None,None,None,None,None),
 	(1,14,"GtkWidget","margin-start","12",None,None,None,None,None),
 	(1,14,"GtkWidget","margin-top","12",None,None,None,None,None),
-	(1,14,"GtkWidget","tooltip-text","Очистить путь",None,None,None,None,None)
+	(1,14,"GtkWidget","tooltip-text","Очистить путь",None,None,None,None,None),
+	(1,15,"GtkOrientable","orientation","vertical",None,None,None,None,None),
+	(1,27,"GtkBox","baseline-position","bottom",None,None,None,None,None),
+	(1,27,"GtkBox","spacing","1",None,None,None,None,None),
+	(1,27,"GtkWidget","valign","end",None,None,None,None,None),
+	(1,27,"GtkWidget","vexpand","True",None,None,None,None,None),
+	(1,28,"GtkAccessible","accessible-role","option",None,None,None,None,None),
+	(1,28,"GtkEntry","placeholder-text","Server Address",None,None,None,None,None),
+	(1,28,"GtkWidget","hexpand","True",None,None,None,None,None),
+	(1,28,"GtkWidget","margin-bottom","5",None,None,None,None,None),
+	(1,28,"GtkWidget","margin-end","5",None,None,None,None,None),
+	(1,28,"GtkWidget","margin-start","5",None,None,None,None,None),
+	(1,28,"GtkWidget","margin-top","5",None,None,None,None,None),
+	(1,28,"GtkWidget","tooltip-markup","Server Address",None,None,None,None,None),
+	(1,28,"GtkWidget","tooltip-text","Server Address",None,None,None,None,None),
+	(1,29,"GtkButton","label","Add",None,None,None,None,None),
+	(1,29,"GtkWidget","margin-bottom","5",None,None,None,None,None),
+	(1,29,"GtkWidget","margin-end","5",None,None,None,None,None),
+	(1,29,"GtkWidget","margin-top","5",None,None,None,None,None),
+	(1,30,"GtkButton","label","Connect",None,None,None,None,None),
+	(1,30,"GtkWidget","margin-bottom","5",None,None,None,None,None),
+	(1,30,"GtkWidget","margin-end","5",None,None,None,None,None),
+	(1,30,"GtkWidget","margin-top","5",None,None,None,None,None)
   </object_property>
 </cambalache-project>

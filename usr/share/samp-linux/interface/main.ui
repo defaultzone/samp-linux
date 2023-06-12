@@ -9,12 +9,59 @@
         <property name="page">3</property>
         <property name="tab-pos">left</property>
         <child>
-          <object class="GtkBox"/>
-        </child>
-        <child>
           <object class="GtkBox">
             <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkListBox">
+                <child>
+                  <object class="GtkEntry"/>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkEntry"/>
+            </child>
+            <child>
+              <object class="GtkBox" id="favorites_tab_bottom_box">
+                <property name="baseline-position">bottom</property>
+                <property name="spacing">1</property>
+                <property name="valign">end</property>
+                <property name="vexpand">True</property>
+                <child>
+                  <object class="GtkEntry" id="entry_add_server">
+                    <property name="accessible-role">option</property>
+                    <property name="hexpand">True</property>
+                    <property name="margin-bottom">5</property>
+                    <property name="margin-end">5</property>
+                    <property name="margin-start">5</property>
+                    <property name="margin-top">5</property>
+                    <property name="placeholder-text">Server Address</property>
+                    <property name="tooltip-markup">Server Address</property>
+                    <property name="tooltip-text">Server Address</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_add_server">
+                    <property name="label">Add</property>
+                    <property name="margin-bottom">5</property>
+                    <property name="margin-end">5</property>
+                    <property name="margin-top">5</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton" id="button_connect_to_server">
+                    <property name="label">Connect</property>
+                    <property name="margin-bottom">5</property>
+                    <property name="margin-end">5</property>
+                    <property name="margin-top">5</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
+        </child>
+        <child>
+          <object class="GtkBox"/>
         </child>
         <child>
           <object class="GtkBox"/>

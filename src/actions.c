@@ -12,7 +12,7 @@ static void on_file_dialog_compete(GObject* source_object, GAsyncResult* result,
     if (file) {
         const char* filepath = g_file_peek_path(file);
         gtk_entry_buffer_set_text(buffer_of_input_path_to_game, filepath, -1);
-        change_value_in_config(get_config_file("config.conf"), "game_path", filepath, FALSE);
+        config_change_value(get_config_file("config.conf"), "game_path", filepath, FALSE);
         g_object_unref(file);
     }
 }
@@ -65,19 +65,19 @@ void check_wine_path(GtkButton* button, gpointer data) {
 }
 
 void on_game_path_input_changed(GtkEditable* self, gpointer user_data) {
-    change_value_in_config(get_config_file("config.conf"), "game_path", gtk_editable_get_text(self), FALSE);
+    config_change_value(get_config_file("config.conf"), "game_path", gtk_editable_get_text(self), FALSE);
 }
 
 void on_wine_input_changed(GtkEditable* self, gpointer user_data) {
-    change_value_in_config(get_config_file("config.conf"), "wine_path", gtk_editable_get_text(self), FALSE);
+    config_change_value(get_config_file("config.conf"), "wine_path", gtk_editable_get_text(self), FALSE);
 }
 
 void clear_game_path_input(GtkButton* button, gpointer data) {
     gtk_entry_buffer_set_text(buffer_of_input_path_to_game, "", -1);
-    change_value_in_config(get_config_file("config.conf"), "game_path", "", FALSE);
+    config_change_value(get_config_file("config.conf"), "game_path", "", FALSE);
 }
 
 void clear_wine_path_input(GtkButton* button, gpointer data) {
     gtk_entry_buffer_set_text(wine_executable_buffer, "", -1);
-    change_value_in_config(get_config_file("config.conf"), "game_path", "", FALSE);
+    config_change_value(get_config_file("config.conf"), "game_path", "", FALSE);
 }

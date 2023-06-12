@@ -14,24 +14,17 @@ GtkWindow* main_window;
 
 void on_main_application_activate(GtkApplication* app, gpointer data) {
     GtkSettings* settings;
-
     GObject* window;
-    GObject* button_select_path_to_game;
-    GObject* button_check_path_to_wine;
-    GObject* input_path_to_game;
-    GObject* input_path_to_wine;
-    GObject* clear_game_path_button;
-    GObject* clear_wine_path_button;
 
     const char* config_path = get_config_file("config.conf");
 
     buffer_of_input_path_to_game = gtk_entry_buffer_new(
-            get_value_from_config(config_path, "game_path"),
+            config_get_value(config_path, "game_path"),
             -1
             );
 
     wine_executable_buffer = gtk_entry_buffer_new(
-            get_value_from_config(config_path, "wine_path"),
+            config_get_value(config_path, "wine_path"),
             -1
             );
 
@@ -42,8 +35,19 @@ void on_main_application_activate(GtkApplication* app, gpointer data) {
     g_object_set(settings, "gtk-application-prefer-dark-theme", TRUE, NULL);
 
     //
+    // The contents of the favorites tab.
+    //
+
+    //
     // The contents of the settings tab.
     //
+
+    GObject* button_select_path_to_game;
+    GObject* button_check_path_to_wine;
+    GObject* input_path_to_game;
+    GObject* input_path_to_wine;
+    GObject* clear_game_path_button;
+    GObject* clear_wine_path_button;
 
     button_select_path_to_game = gtk_builder_get_object(main_window_builder, "button_select_path_to_game");
     g_signal_connect(button_select_path_to_game, SIGNAL_ON_CLICKED, G_CALLBACK(open_file_view_for_select_game), NULL);

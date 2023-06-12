@@ -2,7 +2,6 @@
 #include "window.h"
 #include "config.h"
 #include "path.h"
-#include "gtk-assets.h"
 
 static void on_file_dialog_compete(GObject* source_object, GAsyncResult* result, gpointer data) {
     GtkFileDialog* dialog = GTK_FILE_DIALOG(source_object);

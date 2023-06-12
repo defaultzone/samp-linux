@@ -215,7 +215,7 @@ ConfigArray config_array_remove_item(ConfigArray _config_array, int index) {
     size_t config_array_length = config_array_get_length(_config_array);
 
     if (config_array_length - 1 >= index) {
-        char** config_array = config_array_parse(config_array);
+        char** config_array = config_array_parse(_config_array);
         char** temp_config_array = (char**) malloc(sizeof(char*) * (config_array_length - 1));
         size_t i, j;
 
